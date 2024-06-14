@@ -1,0 +1,23 @@
+{
+  "name": "pkg-canvas-test",
+  "private": true,
+  "version": "0.0.0",
+  "pkg": {
+    "assets": [
+      "node_modules/canvas/build/Release/**/*"
+    ]
+  },
+  "scripts": {
+    "make-bin": "pkg src/index.js --output dist/bin --targets node18-macos-x64 --compress GZip",
+    "run-bin": "dist/bin"
+  },
+  "dependencies": {
+    "canvas": "~2.11.2"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "~5.12.0"
+  },
+  "engines": {
+    "node": "^18"
+  }
+}

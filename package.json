@@ -2,13 +2,15 @@
   "name": "pkg-canvas-test",
   "private": true,
   "version": "0.0.0",
+  "bin": "src/index.js",
   "pkg": {
     "assets": [
       "node_modules/canvas/build/Release/**/*"
-    ]
+    ],
+    "targets": ["node18-macos-x64"]
   },
   "scripts": {
-    "make-bin": "pkg src/index.js --output dist/bin --targets node18-macos-x64 --compress GZip",
+    "make-bin": "pkg . --output dist/bin --compress GZip",
     "run-bin": "dist/bin"
   },
   "dependencies": {
